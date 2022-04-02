@@ -34,6 +34,7 @@ RUN ./venv/bin/pip3.10 install mysql-connector-python==8.0.28
 RUN ./venv/bin/pip3.10 install marshmallow==3.15.0
 RUN ./venv/bin/pip3.10 install marshmallow-enum==1.5.1
 #RUN ./venv/bin/pip3.10 install flask-marshmallow==0.14.0
+RUN ./venv/bin/pip3.10 install Flask-Caching==1.10.1
 
 # apache
 EXPOSE 80
