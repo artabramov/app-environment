@@ -6,11 +6,17 @@ RUN mkdir /app
 RUN git clone https://github.com/artabramov/app-backend.git /app
 WORKDIR /app
 
-# logs
+# app logs
 RUN mkdir /var/log/app
 RUN chown -R www-data:root /var/log/app
 RUN touch /var/log/app/app.log
 RUN chown -R www-data:root /var/log/app/app.log
+
+# celery logs
+RUN mkdir /var/log/celery
+RUN chown -R www-data:root /var/log/celery
+RUN touch /var/log/celery/celery.log
+RUN chown -R www-data:root /var/log/celery/celery.log
 
 # apache
 RUN apt-get install -y apache2 apache2-dev

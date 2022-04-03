@@ -1,0 +1,52 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/apache/access.log
+    - /var/log/apache/error.log
+    - /var/log/app/*.log*
+    - /var/log/mysql/mysql.log*
+    - /var/log/mysql/mysql-slow.log*
+    - /var/log/celery/*.log
+
+output.elasticsearch:
+  enabled: true
+  hosts: ["host.docker.internal:9200"]
+  username: "elastic"
+  password: "changeme"
+  indices:
+  - index: "apache-%{+yyyy.MM.dd}"
+    when.equals:
+      event.module: "apache"
+  - index: "mysql-%{+yyyy.MM.dd}"
+    when.equals:
+      event.module: "mysql"
+  - index: "app-%{+yyyy.MM.dd}"
+    when.contains:
+      log.file.path: "/var/log/app/"
+
+filebeat.modules:
+- module: apache
+  access:
+    enabled: true
+    var.paths: ["/var/log/apache/access.log"]
+  error:
+    enabled: true
+    var.paths: ["/var/log/apache/error.log"]
+
+- module: mysql
+  error:
+    enabled: true
+    var.paths: ["/var/log/mysql/mysql.log*"]
+  slowlog:
+    enabled: true
+    var.paths: ["/var/log/mysql/mysql-slow.log*"]
+
+#- module: redis
+#  log:
+#    enabled: true
+#    var.paths: ["/path/to/log/redis/redis-server.log*"]
+#  slowlog:
+#    enabled: true
+#    var.hosts: ["localhost:6378"]
+#    var.password: "YOUR_PASSWORD"
