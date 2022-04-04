@@ -42,11 +42,11 @@ filebeat.modules:
     enabled: true
     var.paths: ["/var/log/mysql/mysql-slow.log*"]
 
-#- module: redis
-#  log:
-#    enabled: true
-#    var.paths: ["/path/to/log/redis/redis-server.log*"]
-#  slowlog:
-#    enabled: true
-#    var.hosts: ["localhost:6378"]
-#    var.password: "YOUR_PASSWORD"
+- module: redis
+  log:
+    enabled: true
+    var.paths: ["/var/log/redis/redis-server.log*"]
+  slowlog:
+    enabled: true
+    var.hosts: ["host.docker.internal:6378"]
+    var.password: "admin"

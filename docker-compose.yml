@@ -77,9 +77,13 @@ services:
     image: bitnami/redis:6.2.6
     container_name: redis
     #command: redis-server --loglevel=warning --logfile=/var/log/redis/redis-server.log
+    #command: redis-server --loglevel warning --requirepass foobared
+    command: redis-server --protected-mode no --loglevel warning
     restart: always
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+      #- ALLOW_EMPTY_PASSWORD=yes
+      #- REDIS_MASTER_PASSWORD="${REDIS_MASTER_PASSWORD}"
+      - REDIS_PASSWORD="admin"
     ports:
       - "6379:6379"
     deploy:
@@ -95,6 +99,7 @@ services:
     restart: always
     environment:
     - REDIS_HOSTS=redis:host.docker.internal:6379
+    - REDIS_PASSWORD="admin"
     ports:
     - "8081:8081"
 
