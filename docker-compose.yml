@@ -78,12 +78,16 @@ services:
     container_name: redis
     #command: redis-server --loglevel=warning --logfile=/var/log/redis/redis-server.log
     #command: redis-server --loglevel warning --requirepass foobared
-    command: redis-server --protected-mode no --loglevel warning
+    command: redis-server --protected-mode no --loglevel warning --logfile /var/log/redis/redis-server.log
     restart: always
     environment:
       #- ALLOW_EMPTY_PASSWORD=yes
       #- REDIS_MASTER_PASSWORD="${REDIS_MASTER_PASSWORD}"
       - REDIS_PASSWORD="admin"
+      - REDIS_AOF_ENABLED=no
+    volumes:
+    - redis_log:/var/log/redis
+    user: root # for write log permissions
     ports:
       - "6379:6379"
     deploy:
@@ -143,3 +147,4 @@ volumes:
   flower_data:
   elasticsearch_data:
   celery_log:
+  redis_log:
