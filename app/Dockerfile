@@ -11,8 +11,6 @@ RUN mkdir /var/log/app
 RUN chown -R www-data:root /var/log/app
 RUN touch /var/log/app/app.log
 RUN chown -R www-data:root /var/log/app/app.log
-RUN touch /var/log/app/app-1.log
-RUN chown -R www-data:root /var/log/app/app-1.log
 
 # celery logs
 RUN mkdir /var/log/celery
