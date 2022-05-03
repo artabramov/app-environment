@@ -136,6 +136,9 @@ services:
     - celery_log:/var/log/celery
     ports:
     - "8080:80"
+    #environment:
+    #- SET_CONTAINER_TIMEZONE=true
+    #- TZ=Etc/UTC
 
 volumes:
   mysql_data:

@@ -1,5 +1,7 @@
 FROM python:3.10
 RUN apt-get update
+RUN apt-get install -y ntp
+RUN service ntp start
 
 # git
 RUN mkdir /app
@@ -41,6 +43,8 @@ RUN ./venv/bin/pip3.10 install marshmallow==3.15.0
 RUN ./venv/bin/pip3.10 install marshmallow-enum==1.5.1
 #RUN ./venv/bin/pip3.10 install flask-marshmallow==0.14.0
 RUN ./venv/bin/pip3.10 install Flask-Caching==1.10.1
+RUN ./venv/bin/pip3.10 install pyotp==2.6.0
+RUN ./venv/bin/pip3.10 install qrcode[pil]==7.3.1
 
 # apache
 EXPOSE 80
