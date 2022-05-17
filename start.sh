@@ -1,3 +1,4 @@
+#sudo chmod 666 /var/run/docker.sock
 docker build --no-cache -t app ./app/
 #cp -n ./.env.tmp ./.env.dev
 docker-compose --env-file ./.env up -d
