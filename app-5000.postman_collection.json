@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c353dbe0-1d7d-4cf6-b3d7-f9a24082e689",
+		"_postman_id": "16092874-d3bd-4197-89e4-702d1cb2b2cb",
 		"name": "app:5000",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -18,6 +18,71 @@
 					"port": "5000",
 					"path": [
 						"hi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/user/?user_email=johndoe1@noreply.no&user_login=johndoe1&user_name=John Doe&user_pass=1234",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "user_email",
+							"value": "johndoe1@noreply.no"
+						},
+						{
+							"key": "user_login",
+							"value": "johndoe1"
+						},
+						{
+							"key": "user_name",
+							"value": "John Doe"
+						},
+						{
+							"key": "user_pass",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user restore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/pass?user_login=johndoe1&user_pass=192980",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"pass"
+					],
+					"query": [
+						{
+							"key": "user_login",
+							"value": "johndoe1"
+						},
+						{
+							"key": "user_pass",
+							"value": "192980"
+						}
 					]
 				}
 			},
