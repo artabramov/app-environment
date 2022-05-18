@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "c353dbe0-1d7d-4cf6-b3d7-f9a24082e689",
+		"name": "app:5000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/hi",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"hi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
