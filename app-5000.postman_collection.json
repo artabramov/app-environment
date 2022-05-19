@@ -61,6 +61,64 @@
 			"response": []
 		},
 		{
+			"name": "user signin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/token?user_login=johndoe2&user_code=050977",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"token"
+					],
+					"query": [
+						{
+							"key": "user_login",
+							"value": "johndoe2"
+						},
+						{
+							"key": "user_code",
+							"value": "050977"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user signout",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/token/?user_token=eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiTGVCV2FZUWNxNUYxU2tzMlA2bnFTcTZjUkk1RjRqUEVQcmFKcmhvMHpNRFp2NDlkaXNvTnRGaWpoVWZvYnZzYjY4dVExSFNIUHRoZzhZSXh0T3NmMzFpUkhoQ1A4dWt2bG9vM1FiSVdLbTU1UlBWMGlQYnhWUWFzTUdnVnlqVDUiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTM1ODYwODN9",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"token",
+						""
+					],
+					"query": [
+						{
+							"key": "user_token",
+							"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiTGVCV2FZUWNxNUYxU2tzMlA2bnFTcTZjUkk1RjRqUEVQcmFKcmhvMHpNRFp2NDlkaXNvTnRGaWpoVWZvYnZzYjY4dVExSFNIUHRoZzhZSXh0T3NmMzFpUkhoQ1A4dWt2bG9vM1FiSVdLbTU1UlBWMGlQYnhWUWFzTUdnVnlqVDUiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTM1ODYwODN9"
+						},
+						{
+							"key": "user_code",
+							"value": "050977",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "user restore",
 			"request": {
 				"method": "GET",
