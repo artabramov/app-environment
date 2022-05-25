@@ -1,5 +1,6 @@
 # docker data: \\wsl$\docker-desktop-data\version-pack-data\community\docker
 # kill vmmem: wsl --shutdown
+# run tests: source /app/venv/bin/activate && python3 -m unittest -v tests.user_model_tests
 
 #sudo chmod 666 /var/run/docker.sock
 docker build --no-cache -t app ./app/
