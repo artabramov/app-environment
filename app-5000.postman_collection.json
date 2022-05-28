@@ -29,7 +29,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/user/?user_email=johndoe1@noreply.no&user_login=johndoe1&user_name=John Doe&user_pass=1234",
+					"raw": "localhost:5000/user/?user_login=johndoe5&user_name=John Doe&user_pass=1234",
 					"host": [
 						"localhost"
 					],
@@ -40,12 +40,8 @@
 					],
 					"query": [
 						{
-							"key": "user_email",
-							"value": "johndoe1@noreply.no"
-						},
-						{
 							"key": "user_login",
-							"value": "johndoe1"
+							"value": "johndoe5"
 						},
 						{
 							"key": "user_name",
@@ -66,7 +62,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/token?user_login=johndoe2&user_code=050977",
+					"raw": "localhost:5000/token?user_login=johndoe3&user_code=479928",
 					"host": [
 						"localhost"
 					],
@@ -77,11 +73,11 @@
 					"query": [
 						{
 							"key": "user_login",
-							"value": "johndoe2"
+							"value": "johndoe3"
 						},
 						{
 							"key": "user_code",
-							"value": "050977"
+							"value": "479928"
 						}
 					]
 				}
@@ -92,9 +88,15 @@
 			"name": "user signout",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "user_token",
+						"value": "eyJ1c2VyX2lkIjogNiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiSXJWb3I4UDBuVW81ZVRzQ3dDU0g4bXpTenJLQ3NaYlFHckF6cUlMZTNSM0l2NGNzWmZidXU3eTJLc1UwbWw5ckRnd2NBS212enc5NGV1eEY4QUpvNnQxWVdOblFXTnBLZTdJUHJoeGI5MVlHckQ1WlZWMUR3VGhIZ3JNWGRXdUUiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQwNzg5NDJ9==",
+						"type": "default"
+					}
+				],
 				"url": {
-					"raw": "localhost:5000/token/?user_token=eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiTGVCV2FZUWNxNUYxU2tzMlA2bnFTcTZjUkk1RjRqUEVQcmFKcmhvMHpNRFp2NDlkaXNvTnRGaWpoVWZvYnZzYjY4dVExSFNIUHRoZzhZSXh0T3NmMzFpUkhoQ1A4dWt2bG9vM1FiSVdLbTU1UlBWMGlQYnhWUWFzTUdnVnlqVDUiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTM1ODYwODN9",
+					"raw": "localhost:5000/token/",
 					"host": [
 						"localhost"
 					],
@@ -104,10 +106,6 @@
 						""
 					],
 					"query": [
-						{
-							"key": "user_token",
-							"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiTGVCV2FZUWNxNUYxU2tzMlA2bnFTcTZjUkk1RjRqUEVQcmFKcmhvMHpNRFp2NDlkaXNvTnRGaWpoVWZvYnZzYjY4dVExSFNIUHRoZzhZSXh0T3NmMzFpUkhoQ1A4dWt2bG9vM1FiSVdLbTU1UlBWMGlQYnhWUWFzTUdnVnlqVDUiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTM1ODYwODN9"
-						},
 						{
 							"key": "user_code",
 							"value": "050977",
@@ -124,7 +122,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/pass?user_login=johndoe1&user_pass=192980",
+					"raw": "localhost:5000/pass?user_login=johndoe5&user_pass=1234",
 					"host": [
 						"localhost"
 					],
@@ -135,12 +133,148 @@
 					"query": [
 						{
 							"key": "user_login",
-							"value": "johndoe1"
+							"value": "johndoe5"
 						},
 						{
 							"key": "user_pass",
-							"value": "192980"
+							"value": "1234"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user select",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "eyJ1c2VyX2lkIjogMywgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiZDhXNUM3VWVTQjk3SjZsaDVWU2duVDBvQVlGZGUxQ1BGQ3NDck1ZUzA3N2xmeHdZeXFEMDZtWGFBcmxabkRGZFM2QmlwMHBkY3pyak1KS0NodTgzRWxKWHByTFNxeTBhaXQ0OTJaZEhmV2JzdVU0UEhvamRSMWIwRE9PU2lpUFAiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQyMDMwODZ9",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/user/3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "eyJ1c2VyX2lkIjogMywgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiZDhXNUM3VWVTQjk3SjZsaDVWU2duVDBvQVlGZGUxQ1BGQ3NDck1ZUzA3N2xmeHdZeXFEMDZtWGFBcmxabkRGZFM2QmlwMHBkY3pyak1KS0NodTgzRWxKWHByTFNxeTBhaXQ0OTJaZEhmV2JzdVU0UEhvamRSMWIwRE9PU2lpUFAiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQyMDMwODZ9",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/user/1?user_name=John Connor 3&user_role=guest&user_pass=12345&key_1=KKKK 2&key_2=VVV 2",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"1"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": "John Connor 3"
+						},
+						{
+							"key": "user_role",
+							"value": "guest"
+						},
+						{
+							"key": "user_pass",
+							"value": "12345"
+						},
+						{
+							"key": "key_1",
+							"value": "KKKK 2"
+						},
+						{
+							"key": "key_2",
+							"value": "VVV 2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "eyJ1c2VyX2lkIjogMywgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiZDhXNUM3VWVTQjk3SjZsaDVWU2duVDBvQVlGZGUxQ1BGQ3NDck1ZUzA3N2xmeHdZeXFEMDZtWGFBcmxabkRGZFM2QmlwMHBkY3pyak1KS0NodTgzRWxKWHByTFNxeTBhaXQ0OTJaZEhmV2JzdVU0UEhvamRSMWIwRE9PU2lpUFAiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQyMDMwODZ9",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/user/3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "eyJ1c2VyX2lkIjogMywgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiZDhXNUM3VWVTQjk3SjZsaDVWU2duVDBvQVlGZGUxQ1BGQ3NDck1ZUzA3N2xmeHdZeXFEMDZtWGFBcmxabkRGZFM2QmlwMHBkY3pyak1KS0NodTgzRWxKWHByTFNxeTBhaXQ0OTJaZEhmV2JzdVU0UEhvamRSMWIwRE9PU2lpUFAiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQyMDMwODZ9",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_files",
+							"type": "file",
+							"src": [
+								"/C:/Users/artem/Downloads/16462329651015.jpg",
+								"/C:/Users/artem/Downloads/2018072814475780_ND_ND5_6593-1-copy-1024x576.jpg",
+								"/C:/Users/artem/Downloads/ChromeSetup.exe"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/image/",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"image",
+						""
 					]
 				}
 			},
