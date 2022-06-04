@@ -6,6 +6,343 @@
 	},
 	"item": [
 		{
+			"name": "user routes",
+			"item": [
+				{
+					"name": "user register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/user/?user_login=johndoe2&user_name=John Doe&user_pass=1234",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "user_login",
+									"value": "johndoe2"
+								},
+								{
+									"key": "user_name",
+									"value": "John Doe"
+								},
+								{
+									"key": "user_pass",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user signin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/token?user_login=johndoe2&user_totp=331216",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "user_login",
+									"value": "johndoe2"
+								},
+								{
+									"key": "user_totp",
+									"value": "331216"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user signout",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiNnZuMFRMUVpDRXpwazh6cjJSUTV1eldSUVlxd1pDcEtibDFCYWRrWmxmN1JIMTZoY1hxZmtPNzlkTFVCb2dLeUdROGxwUmF2VXhVeFRGQmEzZ25iMVBlT094VENLTEJkaWZyaXZSRVFIcFRHZXlUUGQxU0FQNGpFdFF1MEJWMVoiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9==",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/token/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "user_code",
+									"value": "050977",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user restore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/pass?user_login=johndoe3&user_pass=1234",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"pass"
+							],
+							"query": [
+								{
+									"key": "user_login",
+									"value": "johndoe3"
+								},
+								{
+									"key": "user_pass",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user select",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/11s",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"11s"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/1?user_name=John Connor 22&user_role=reader&user_pass=1234567",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"1"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "John Connor 22"
+								},
+								{
+									"key": "user_role",
+									"value": "reader"
+								},
+								{
+									"key": "user_pass",
+									"value": "1234567"
+								},
+								{
+									"key": "key_1",
+									"value": "KKKK 2",
+									"disabled": true
+								},
+								{
+									"key": "key_2",
+									"value": "VVV 2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "image upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
+								"type": "default"
+							},
+							{
+								"key": "enctype",
+								"value": "multipart/form-data",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_files",
+									"type": "file",
+									"src": [
+										"/C:/Users/artem/Downloads/16462329651015.jpg",
+										"/C:/Users/artem/Downloads/without",
+										"/C:/Users/artem/Downloads/2018072814475780_ND_ND5_6593-1-copy-1024x576.jpg",
+										"/C:/Users/artem/Downloads/double.double.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/image/",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"image",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vol routes",
+			"item": [
+				{
+					"name": "vol insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/vol/?vol_title=johndoe1 vol",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"vol",
+								""
+							],
+							"query": [
+								{
+									"key": "vol_title",
+									"value": "johndoe1 vol"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vol update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/vol/1?vol_title=wtf?",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"vol",
+								"1"
+							],
+							"query": [
+								{
+									"key": "vol_title",
+									"value": "wtf?"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "hi",
 			"request": {
 				"method": "GET",
@@ -18,302 +355,6 @@
 					"port": "5000",
 					"path": [
 						"hi"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user register",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "localhost:5000/user/?user_login=johndoe2&user_name=John Doe&user_pass=1234",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"user",
-						""
-					],
-					"query": [
-						{
-							"key": "user_login",
-							"value": "johndoe2"
-						},
-						{
-							"key": "user_name",
-							"value": "John Doe"
-						},
-						{
-							"key": "user_pass",
-							"value": "1234"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user signin",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:5000/token?user_login=johndoe2&user_totp=331216",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"token"
-					],
-					"query": [
-						{
-							"key": "user_login",
-							"value": "johndoe2"
-						},
-						{
-							"key": "user_totp",
-							"value": "331216"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user signout",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiNnZuMFRMUVpDRXpwazh6cjJSUTV1eldSUVlxd1pDcEtibDFCYWRrWmxmN1JIMTZoY1hxZmtPNzlkTFVCb2dLeUdROGxwUmF2VXhVeFRGQmEzZ25iMVBlT094VENLTEJkaWZyaXZSRVFIcFRHZXlUUGQxU0FQNGpFdFF1MEJWMVoiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9==",
-						"type": "default"
-					}
-				],
-				"url": {
-					"raw": "localhost:5000/token/",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"token",
-						""
-					],
-					"query": [
-						{
-							"key": "user_code",
-							"value": "050977",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user restore",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:5000/pass?user_login=johndoe3&user_pass=1234",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"pass"
-					],
-					"query": [
-						{
-							"key": "user_login",
-							"value": "johndoe3"
-						},
-						{
-							"key": "user_pass",
-							"value": "1234"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user select",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
-						"type": "default"
-					}
-				],
-				"url": {
-					"raw": "localhost:5000/user/11s",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"user",
-						"11s"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user update",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
-						"type": "default"
-					}
-				],
-				"url": {
-					"raw": "localhost:5000/user/1?user_name=John Connor 22&user_role=reader&user_pass=1234567",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"user",
-						"1"
-					],
-					"query": [
-						{
-							"key": "user_name",
-							"value": "John Connor 22"
-						},
-						{
-							"key": "user_role",
-							"value": "reader"
-						},
-						{
-							"key": "user_pass",
-							"value": "1234567"
-						},
-						{
-							"key": "key_1",
-							"value": "KKKK 2",
-							"disabled": true
-						},
-						{
-							"key": "key_2",
-							"value": "VVV 2",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "user delete",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
-						"type": "default"
-					}
-				],
-				"url": {
-					"raw": "localhost:5000/user/1",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"user",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "image upload",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
-						"type": "default"
-					},
-					{
-						"key": "enctype",
-						"value": "multipart/form-data",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "user_files",
-							"type": "file",
-							"src": [
-								"/C:/Users/artem/Downloads/16462329651015.jpg",
-								"/C:/Users/artem/Downloads/without",
-								"/C:/Users/artem/Downloads/2018072814475780_ND_ND5_6593-1-copy-1024x576.jpg",
-								"/C:/Users/artem/Downloads/double.double.jpg"
-							]
-						}
-					]
-				},
-				"url": {
-					"raw": "localhost:5000/image/",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"image",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "vol insert",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "user_token",
-						"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
-						"type": "default"
-					}
-				],
-				"url": {
-					"raw": "localhost:5000/vol/?vol_title=johndoe1 vol",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"vol",
-						""
-					],
-					"query": [
-						{
-							"key": "vol_title",
-							"value": "johndoe1 vol"
-						}
 					]
 				}
 			},
