@@ -47,7 +47,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/token?user_login=johndoe2&user_totp=331216",
+							"raw": "localhost:5000/token?user_login=johndoe2&user_totp=296594",
 							"host": [
 								"localhost"
 							],
@@ -62,7 +62,7 @@
 								},
 								{
 									"key": "user_totp",
-									"value": "331216"
+									"value": "296594"
 								}
 							]
 						}
@@ -136,19 +136,19 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogNCwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiUDRjSVQ3NkNKSDc0R3RBc0cycFlMUlgwc0dSd3UxaFVzWW5aZlJUaGttV3c2TDFDNGR0TUc2OEtjODFVaWxGZFhBTzdET29YVFdHZVoxazUzakJyWWlNT3NRQTdFMlRPcGVraGFVSUtHOTgySUpZbmxsUWpsS3hDMmVDMkNZWVYiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ0MzE1NDN9",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/user/11s",
+							"raw": "localhost:5000/user/1",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"user",
-								"11s"
+								"1"
 							]
 						}
 					},
@@ -290,7 +290,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/?vol_title=johndoe1 vol",
+							"raw": "localhost:5000/vol/?vol_title=VOL 10&vol_currency=USD",
 							"host": [
 								"localhost"
 							],
@@ -302,7 +302,11 @@
 							"query": [
 								{
 									"key": "vol_title",
-									"value": "johndoe1 vol"
+									"value": "VOL 10"
+								},
+								{
+									"key": "vol_currency",
+									"value": "USD"
 								}
 							]
 						}
@@ -316,24 +320,139 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/1?vol_title=wtf?",
+							"raw": "localhost:5000/vol/26?vol_title=wtf?",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"vol",
-								"1"
+								"26"
 							],
 							"query": [
 								{
 									"key": "vol_title",
 									"value": "wtf?"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vol select",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/vol/12",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"vol",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vol delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/vol/26",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"vol",
+								"26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vols list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/vols/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"vols",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "post insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/post/?vol_id=1&post_title=hello world",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								""
+							],
+							"query": [
+								{
+									"key": "vol_id",
+									"value": "1"
+								},
+								{
+									"key": "post_title",
+									"value": "hello world"
 								}
 							]
 						}
