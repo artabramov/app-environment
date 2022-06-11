@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "user routes",
+			"name": "users",
 			"item": [
 				{
 					"name": "user register",
@@ -276,7 +276,7 @@
 			]
 		},
 		{
-			"name": "vol routes",
+			"name": "vols",
 			"item": [
 				{
 					"name": "vol insert",
@@ -325,19 +325,23 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/26?vol_title=wtf?",
+							"raw": "localhost:5000/vol/3?vol_title=wtf?&vol_currency=EUR",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"vol",
-								"26"
+								"3"
 							],
 							"query": [
 								{
 									"key": "vol_title",
 									"value": "wtf?"
+								},
+								{
+									"key": "vol_currency",
+									"value": "EUR"
 								}
 							]
 						}
@@ -422,7 +426,7 @@
 			]
 		},
 		{
-			"name": "post",
+			"name": "posts",
 			"item": [
 				{
 					"name": "post insert",
@@ -453,6 +457,102 @@
 								{
 									"key": "post_title",
 									"value": "hello world"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "comment insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/comment/?post_id=4&comment_content=First comment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comment",
+								""
+							],
+							"query": [
+								{
+									"key": "post_id",
+									"value": "4"
+								},
+								{
+									"key": "comment_content",
+									"value": "First comment"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "uploads",
+			"item": [
+				{
+					"name": "uploads insert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							},
+							{
+								"key": "enctype",
+								"value": "multipart/form-data",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_files",
+									"type": "file",
+									"src": [
+										"/C:/Users/artem/Downloads/16462329651015.jpg",
+										"/C:/Users/artem/Downloads/without",
+										"/C:/Users/artem/Downloads/2018072814475780_ND_ND5_6593-1-copy-1024x576.jpg",
+										"/C:/Users/artem/Downloads/double.double.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/uploads/?comment_id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"uploads",
+								""
+							],
+							"query": [
+								{
+									"key": "comment_id",
+									"value": "1"
 								}
 							]
 						}
