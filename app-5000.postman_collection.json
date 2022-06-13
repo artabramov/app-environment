@@ -276,10 +276,10 @@
 			]
 		},
 		{
-			"name": "vols",
+			"name": "volumes",
 			"item": [
 				{
-					"name": "vol insert",
+					"name": "volume insert",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -290,22 +290,22 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/?vol_title=VOL 10&vol_currency=USD",
+							"raw": "localhost:5000/volume/?volume_title=Volume title&volume_currency=USD",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"vol",
+								"volume",
 								""
 							],
 							"query": [
 								{
-									"key": "vol_title",
-									"value": "VOL 10"
+									"key": "volume_title",
+									"value": "Volume title"
 								},
 								{
-									"key": "vol_currency",
+									"key": "volume_currency",
 									"value": "USD"
 								}
 							]
@@ -314,7 +314,7 @@
 					"response": []
 				},
 				{
-					"name": "vol update",
+					"name": "volume update",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -325,22 +325,22 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/3?vol_title=wtf?&vol_currency=EUR",
+							"raw": "localhost:5000/volume/1?volume_title=wtf?&volume_currency=EUR",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"vol",
-								"3"
+								"volume",
+								"1"
 							],
 							"query": [
 								{
-									"key": "vol_title",
+									"key": "volume_title",
 									"value": "wtf?"
 								},
 								{
-									"key": "vol_currency",
+									"key": "volume_currency",
 									"value": "EUR"
 								}
 							]
@@ -349,7 +349,7 @@
 					"response": []
 				},
 				{
-					"name": "vol select",
+					"name": "volume select",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -360,21 +360,21 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/12",
+							"raw": "localhost:5000/volume/1",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"vol",
-								"12"
+								"volume",
+								"1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "vol delete",
+					"name": "volume delete",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -385,13 +385,13 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vol/26",
+							"raw": "localhost:5000/volume/26",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"vol",
+								"volume",
 								"26"
 							]
 						}
@@ -399,7 +399,7 @@
 					"response": []
 				},
 				{
-					"name": "vols list",
+					"name": "volumes list",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -410,13 +410,13 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/vols/1",
+							"raw": "localhost:5000/volumes/1",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"vols",
+								"volumes",
 								"1"
 							]
 						}
@@ -440,7 +440,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/?vol_id=1&post_title=hello world",
+							"raw": "localhost:5000/post/?volume_id=1&post_title=hello world&post_status=todo",
 							"host": [
 								"localhost"
 							],
@@ -451,13 +451,77 @@
 							],
 							"query": [
 								{
-									"key": "vol_id",
+									"key": "volume_id",
 									"value": "1"
 								},
 								{
 									"key": "post_title",
 									"value": "hello world"
+								},
+								{
+									"key": "post_status",
+									"value": "todo"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/post/1?post_title=wtf?!&post_status=doing",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"1"
+							],
+							"query": [
+								{
+									"key": "post_title",
+									"value": "wtf?!"
+								},
+								{
+									"key": "post_status",
+									"value": "doing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/post/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"1"
 							]
 						}
 					},
@@ -480,7 +544,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/comment/?post_id=4&comment_content=First comment",
+							"raw": "localhost:5000/comment/?post_id=1&comment_content=First comment&comment_sum=1.01",
 							"host": [
 								"localhost"
 							],
@@ -492,11 +556,106 @@
 							"query": [
 								{
 									"key": "post_id",
-									"value": "4"
+									"value": "1"
 								},
 								{
 									"key": "comment_content",
 									"value": "First comment"
+								},
+								{
+									"key": "comment_sum",
+									"value": "1.01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/comment/1?comment_content=wtf?&comment_sum=13979.73",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comment",
+								"1"
+							],
+							"query": [
+								{
+									"key": "comment_content",
+									"value": "wtf?"
+								},
+								{
+									"key": "comment_sum",
+									"value": "13979.73"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/comment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comments list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/comments/1?offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"comments",
+								"1"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
 								}
 							]
 						}
@@ -554,6 +713,67 @@
 									"key": "comment_id",
 									"value": "1"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/upload/1?upload_name=wtf.jpg",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"upload",
+								"1"
+							],
+							"query": [
+								{
+									"key": "upload_name",
+									"value": "wtf.jpg"
+								},
+								{
+									"key": "vol_currency",
+									"value": "EUR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/upload/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"upload",
+								"1"
 							]
 						}
 					},
