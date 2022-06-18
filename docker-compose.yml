@@ -7,6 +7,7 @@ services:
     depends_on:
       - postgres
       - app
+      - redis
     restart: unless-stopped
     environment:
       - discovery.type=single-node
@@ -29,7 +30,8 @@ services:
     volumes:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - apache_log:/var/log/apache:ro
-      - postgres_log:/var/log/postgres:ro
+      - postgres_log:/var/log/postgresql:ro
+      - redis_log:/var/log/redis:ro
       - app_log:/var/log/app:ro
     command: ["filebeat", "-e", "-strict.perms=false"]
     deploy:
