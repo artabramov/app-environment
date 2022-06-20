@@ -14,7 +14,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/user/?user_login=johndoe8&user_name=John Doe&user_pass=1234",
+							"raw": "localhost:5000/user/?user_login=johndoe1&user_name=John Doe 1&user_pass=1234",
 							"host": [
 								"localhost"
 							],
@@ -26,11 +26,11 @@
 							"query": [
 								{
 									"key": "user_login",
-									"value": "johndoe8"
+									"value": "johndoe1"
 								},
 								{
 									"key": "user_name",
-									"value": "John Doe"
+									"value": "John Doe 1"
 								},
 								{
 									"key": "user_pass",
@@ -47,7 +47,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/token?user_login=johndoe8&user_totp=155628",
+							"raw": "localhost:5000/token?user_login=johndoe1&user_totp=208940",
 							"host": [
 								"localhost"
 							],
@@ -58,11 +58,11 @@
 							"query": [
 								{
 									"key": "user_login",
-									"value": "johndoe8"
+									"value": "johndoe1"
 								},
 								{
 									"key": "user_totp",
-									"value": "155628"
+									"value": "208940"
 								}
 							]
 						}
@@ -76,7 +76,7 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMTAsICJ1c2VyX25hbWUiOiAiSm9obiBEb2UiLCAidG9rZW5fc2lnbmF0dXJlIjogIjdKTXRyM2RWcW9sNmNSaXNWNDhpU3NIWFk5UkRURmpRQW5NVzRLZ0hMYkJlMElxNTNiZGtHY2dzUTg3VVVkdm1HcDFJYjNVU25yazJpUDZPaG1aRzNqc09aeHJzYXNHb2FUbElKN0QzR0JYTjJBMnoxVTRHWDJ3YkoxbVBTUGZ0IiwgInRva2VuX2V4cGlyZXMiOiAxNjU1ODQwMTU3LjA5MTU0NDZ9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICIzcG1DaE9BbXk4SmRqUEFTN25hRmNkME9CYXUxb2E4Ymx2b2Y1VkN4U1FsbEtqWTdvR1gzWEFaeFRGYVBFaVdDdFlNbXBPQngydlBwclN2MDBBYnA5ZzBzRDNSNm1CQnp2eWpzaUtVejhqODJLcUJWNHRoUkRqMDM3c01qbzJicCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMxMTUxMC4wMzI4NjEyfQ==",
 								"type": "default"
 							}
 						],
@@ -107,7 +107,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:5000/pass?user_login=johndoe8&user_pass=1234",
+							"raw": "localhost:5000/pass?user_login=johndoe1&user_pass=1234",
 							"host": [
 								"localhost"
 							],
@@ -118,7 +118,7 @@
 							"query": [
 								{
 									"key": "user_login",
-									"value": "johndoe8"
+									"value": "johndoe1"
 								},
 								{
 									"key": "user_pass",
@@ -136,19 +136,19 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMTAsICJ1c2VyX25hbWUiOiAiSm9obiBEb2UiLCAidG9rZW5fc2lnbmF0dXJlIjogIlpHTnJNNHBwcXJ4WmlMbUNJRlhzdU9jbFVGVDRDM2NmMWJkclpkRU5QYjgyMHVxeFdQV2tuNVZwVjJKTDVmbzZRSHdDT3F1WDFQV3lwaHJDY1NlcUprQnptM3hGdHlUSGNHVmZjYlBLY05qNk5pd2dTT2hNZ1JJdWxWZ2EwUUxhIiwgInRva2VuX2V4cGlyZXMiOiAxNjU1ODQwOTk1LjExODE0OX0=",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJIeEhGc2F3NFFHQnZzS0x6cXBrd2FJNFFnb0RBajRsTVNLZXhZTk5yMHlRZ1hTU28zMWtLTnRwSXhLZUp2ZkRhWm5ndjVYdTJUZ3hnTDZlMDZ5U2RlS3cyRnVPTGk3czQ1QU1OSFNyTjR4QlZmdUZiUHA1eUNqWVpEQUlRR3V0VyIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjI1Njk3MC44MTQ3NjE2fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/user/8",
+							"raw": "localhost:5000/user/2",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"user",
-								"8"
+								"2"
 							]
 						}
 					},
@@ -161,28 +161,28 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMTAsICJ1c2VyX25hbWUiOiAiSm9obiBEb2UiLCAidG9rZW5fc2lnbmF0dXJlIjogIlpHTnJNNHBwcXJ4WmlMbUNJRlhzdU9jbFVGVDRDM2NmMWJkclpkRU5QYjgyMHVxeFdQV2tuNVZwVjJKTDVmbzZRSHdDT3F1WDFQV3lwaHJDY1NlcUprQnptM3hGdHlUSGNHVmZjYlBLY05qNk5pd2dTT2hNZ1JJdWxWZ2EwUUxhIiwgInRva2VuX2V4cGlyZXMiOiAxNjU1ODQwOTk1LjExODE0OX0=",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJIeEhGc2F3NFFHQnZzS0x6cXBrd2FJNFFnb0RBajRsTVNLZXhZTk5yMHlRZ1hTU28zMWtLTnRwSXhLZUp2ZkRhWm5ndjVYdTJUZ3hnTDZlMDZ5U2RlS3cyRnVPTGk3czQ1QU1OSFNyTjR4QlZmdUZiUHA1eUNqWVpEQUlRR3V0VyIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjI1Njk3MC44MTQ3NjE2fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/user/10?user_name=John Connor 22&user_role=reader",
+							"raw": "localhost:5000/user/2?user_name=John Connor 14&user_status=editor2",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"user",
-								"10"
+								"2"
 							],
 							"query": [
 								{
 									"key": "user_name",
-									"value": "John Connor 22"
+									"value": "John Connor 14"
 								},
 								{
-									"key": "user_role",
-									"value": "reader"
+									"key": "user_status",
+									"value": "editor2"
 								},
 								{
 									"key": "user_pass",
@@ -205,38 +205,13 @@
 					"response": []
 				},
 				{
-					"name": "user delete",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMTAsICJ1c2VyX25hbWUiOiAiSm9obiBEb2UiLCAidG9rZW5fc2lnbmF0dXJlIjogIlpHTnJNNHBwcXJ4WmlMbUNJRlhzdU9jbFVGVDRDM2NmMWJkclpkRU5QYjgyMHVxeFdQV2tuNVZwVjJKTDVmbzZRSHdDT3F1WDFQV3lwaHJDY1NlcUprQnptM3hGdHlUSGNHVmZjYlBLY05qNk5pd2dTT2hNZ1JJdWxWZ2EwUUxhIiwgInRva2VuX2V4cGlyZXMiOiAxNjU1ODQwOTk1LjExODE0OX0=",
-								"type": "default"
-							}
-						],
-						"url": {
-							"raw": "localhost:5000/user/3",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"user",
-								"3"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "user thumbnail",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMTAsICJ1c2VyX25hbWUiOiAiSm9obiBEb2UiLCAidG9rZW5fc2lnbmF0dXJlIjogIlpHTnJNNHBwcXJ4WmlMbUNJRlhzdU9jbFVGVDRDM2NmMWJkclpkRU5QYjgyMHVxeFdQV2tuNVZwVjJKTDVmbzZRSHdDT3F1WDFQV3lwaHJDY1NlcUprQnptM3hGdHlUSGNHVmZjYlBLY05qNk5pd2dTT2hNZ1JJdWxWZ2EwUUxhIiwgInRva2VuX2V4cGlyZXMiOiAxNjU1ODQwOTk1LjExODE0OX0=",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJIeEhGc2F3NFFHQnZzS0x6cXBrd2FJNFFnb0RBajRsTVNLZXhZTk5yMHlRZ1hTU28zMWtLTnRwSXhLZUp2ZkRhWm5ndjVYdTJUZ3hnTDZlMDZ5U2RlS3cyRnVPTGk3czQ1QU1OSFNyTjR4QlZmdUZiUHA1eUNqWVpEQUlRR3V0VyIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjI1Njk3MC44MTQ3NjE2fQ==",
 								"type": "default"
 							},
 							{
@@ -251,7 +226,7 @@
 								{
 									"key": "user_file",
 									"type": "file",
-									"src": "/C:/Users/artem/Downloads/double.double.jpg"
+									"src": "/C:/Users/artem/Downloads/16462329651015.jpg"
 								}
 							]
 						},
@@ -264,6 +239,31 @@
 							"path": [
 								"image",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJIeEhGc2F3NFFHQnZzS0x6cXBrd2FJNFFnb0RBajRsTVNLZXhZTk5yMHlRZ1hTU28zMWtLTnRwSXhLZUp2ZkRhWm5ndjVYdTJUZ3hnTDZlMDZ5U2RlS3cyRnVPTGk3czQ1QU1OSFNyTjR4QlZmdUZiUHA1eUNqWVpEQUlRR3V0VyIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjI1Njk3MC44MTQ3NjE2fQ==",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/users/0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"0"
 							]
 						}
 					},
@@ -281,12 +281,12 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/volume/?volume_title=Volume title&volume_currency=USD",
+							"raw": "localhost:5000/volume/?volume_title=Volume title 1&volume_currency=USD&volume_status=public",
 							"host": [
 								"localhost"
 							],
@@ -298,11 +298,15 @@
 							"query": [
 								{
 									"key": "volume_title",
-									"value": "Volume title"
+									"value": "Volume title 1"
 								},
 								{
 									"key": "volume_currency",
 									"value": "USD"
+								},
+								{
+									"key": "volume_status",
+									"value": "public"
 								}
 							]
 						}
@@ -316,12 +320,12 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/volume/1?volume_title=wtf?&volume_currency=EUR",
+							"raw": "localhost:5000/volume/1?volume_title=WTF title 2&volume_currency=EUR&volume_status=public",
 							"host": [
 								"localhost"
 							],
@@ -333,11 +337,15 @@
 							"query": [
 								{
 									"key": "volume_title",
-									"value": "wtf?"
+									"value": "WTF title 2"
 								},
 								{
 									"key": "volume_currency",
 									"value": "EUR"
+								},
+								{
+									"key": "volume_status",
+									"value": "public"
 								}
 							]
 						}
@@ -351,7 +359,7 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
@@ -376,19 +384,19 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/volume/26",
+							"raw": "localhost:5000/volume/7",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"volume",
-								"26"
+								"7"
 							]
 						}
 					},
@@ -401,19 +409,19 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/volumes/1",
+							"raw": "localhost:5000/volumes/0",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"volumes",
-								"1"
+								"0"
 							]
 						}
 					},
@@ -431,12 +439,12 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/?volume_id=1&post_title=hello world&post_status=todo",
+							"raw": "localhost:5000/post/?volume_id=1&post_title=hello world&post_status=todo&post_tags=asd, asds, hfgjf",
 							"host": [
 								"localhost"
 							],
@@ -457,6 +465,10 @@
 								{
 									"key": "post_status",
 									"value": "todo"
+								},
+								{
+									"key": "post_tags",
+									"value": "asd, asds, hfgjf"
 								}
 							]
 						}
@@ -470,12 +482,12 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTUzMjA4ODMuMTU3NjI2OX0=",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/1?post_title=wtf?!&post_status=doing",
+							"raw": "localhost:5000/post/1?post_title=wtf?!&post_status=done&post_tags=bbb4, bb5",
 							"host": [
 								"localhost"
 							],
@@ -491,8 +503,37 @@
 								},
 								{
 									"key": "post_status",
-									"value": "doing"
+									"value": "done"
+								},
+								{
+									"key": "post_tags",
+									"value": "bbb4, bb5"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post select",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/post/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"post",
+								"2"
 							]
 						}
 					},
@@ -505,19 +546,50 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/1",
+							"raw": "localhost:5000/post/2",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
 								"post",
-								"1"
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user_token",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/posts/0?post_status=done",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"posts",
+								"0"
+							],
+							"query": [
+								{
+									"key": "post_status",
+									"value": "done"
+								}
 							]
 						}
 					},
@@ -535,7 +607,7 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAib1lyNHVpNUtaQ1dLelEzazVJWlkyUE5PR2pNd2p5eWR6b2hLNGlFMklaQUsyTW9xbWhTcHVjMHRua1JRdlBjYWsxQUlZUHpKa2dsN3gzYnNwZjJJSjREejlIYXV6ZUxDaGNWUnF0dWRaUkg1aEZSWHVvRHE1ZG81c2dEZEtPNjEiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTU5MjAzMDcuMjY4ODEzNn0=",
 								"type": "default"
 							}
 						],
@@ -670,7 +742,7 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMiwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAiS2JZMldrTnMzRkZtNXB6UVhNU1I4ZUgwYzNOazRBYnpNamtFQXVPandpV2gyS2RKSE5lUDRTaXhZd0JOQ0dlTEZna0djZjlZRzFaalhCcjZRMTlLWWtKdk9DQkZ2Tlczc0s1U3ZhUEU3VHRabWMyQ1p5VHlOejZuSTRJWWNIVXkiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTQ2Mjc4NDV9",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSIsICJ0b2tlbl9zaWduYXR1cmUiOiAib1lyNHVpNUtaQ1dLelEzazVJWlkyUE5PR2pNd2p5eWR6b2hLNGlFMklaQUsyTW9xbWhTcHVjMHRua1JRdlBjYWsxQUlZUHpKa2dsN3gzYnNwZjJJSjREejlIYXV6ZUxDaGNWUnF0dWRaUkg1aEZSWHVvRHE1ZG81c2dEZEtPNjEiLCAidG9rZW5fZXhwaXJlcyI6IDE2NTU5MjAzMDcuMjY4ODEzNn0=",
 								"type": "default"
 							},
 							{
@@ -689,7 +761,8 @@
 										"/C:/Users/artem/Downloads/16462329651015.jpg",
 										"/C:/Users/artem/Downloads/without",
 										"/C:/Users/artem/Downloads/2018072814475780_ND_ND5_6593-1-copy-1024x576.jpg",
-										"/C:/Users/artem/Downloads/double.double.jpg"
+										"/C:/Users/artem/Downloads/double.double.jpg",
+										"/C:/Users/artem/Downloads/Pulse-Win64-9.1R13.msi"
 									]
 								}
 							]
