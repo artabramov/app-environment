@@ -37,6 +37,10 @@ RUN ./venv/bin/pip3.10 install Flask-Caching==1.10.1
 RUN ./venv/bin/pip3.10 install pyotp==2.6.0
 RUN ./venv/bin/pip3.10 install qrcode[pil]==7.3.1
 
+# frontend
+RUN rm -r /var/www/html/*
+RUN git clone https://github.com/artabramov/app-frontend.git /var/www/html
+
 # apache
 EXPOSE 80
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
