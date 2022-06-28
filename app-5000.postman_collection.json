@@ -436,7 +436,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/category/?category_title=Category 3",
+							"raw": "localhost:5000/category/?category_title=Category 1",
 							"host": [
 								"localhost"
 							],
@@ -448,7 +448,7 @@
 							"query": [
 								{
 									"key": "category_title",
-									"value": "Category 3"
+									"value": "Category 1"
 								}
 							]
 						}
@@ -553,7 +553,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/?volume_id=1&post_title=hello world&post_status=done&post_tags=asd, asds, hfgjf&category_id=1",
+							"raw": "localhost:5000/post/?volume_id=1&category_id=1&post_status=done&post_title=hello world&post_content=Text&post_sum=10&post_tags=asd, asds, hfgjf",
 							"host": [
 								"localhost"
 							],
@@ -568,20 +568,28 @@
 									"value": "1"
 								},
 								{
-									"key": "post_title",
-									"value": "hello world"
+									"key": "category_id",
+									"value": "1"
 								},
 								{
 									"key": "post_status",
 									"value": "done"
 								},
 								{
-									"key": "post_tags",
-									"value": "asd, asds, hfgjf"
+									"key": "post_title",
+									"value": "hello world"
 								},
 								{
-									"key": "category_id",
-									"value": "1"
+									"key": "post_content",
+									"value": "Text"
+								},
+								{
+									"key": "post_sum",
+									"value": "10"
+								},
+								{
+									"key": "post_tags",
+									"value": "asd, asds, hfgjf"
 								}
 							]
 						}
@@ -595,12 +603,12 @@
 						"header": [
 							{
 								"key": "user_token",
-								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJJZTVOTHZrQW1uT2ZXdWwyTjdpSVVBWGh4N2p1MDQyWjdOOXh5a1FTYzRQZ3VKNWRNcWlDQmZERzFNTFE0VnpXdEJuZ0NIaW1vSzhkZkp3eG10QnIxTGxlWHpCMnlacVVOeDc3a3JxaFA2eUtmNVpodnNzT1pkdzN3V0RWYTBHeCIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjMyNDYxNS40MDczOTI3fQ==",
+								"value": "eyJ1c2VyX2lkIjogMSwgInVzZXJfbmFtZSI6ICJKb2huIERvZSAxIiwgInRva2VuX3NpZ25hdHVyZSI6ICJtVVJ3eXQxSXBqNWo4YVlnbDRkeGNiSXRNdFpUc25Bc3VWUmRxZWxVS2tTZGFycUJYM01xeGtlSlA4SXY5VnI0UFB0dE9NV05lWEg5UnB0dzRoTnlieEF2N2N2ZWpxUGNzRDdxZXI2Qkh5eW9jdVdkZ3AzaXVyZkpXZHdTQXJiaSIsICJ0b2tlbl9leHBpcmVzIjogMTY1NjY4MzMzMS43OTQxNDEzfQ==",
 								"type": "default"
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/post/1?post_title=wtf?!&post_status=done&post_tags=bbb4, bb5",
+							"raw": "localhost:5000/post/1?post_status=done&post_title=wtf?!&post_content=Updated text&post_sum=4&post_tags=bbb4, bb5",
 							"host": [
 								"localhost"
 							],
@@ -611,12 +619,21 @@
 							],
 							"query": [
 								{
+									"key": "post_status",
+									"value": "done"
+								},
+								{
 									"key": "post_title",
 									"value": "wtf?!"
 								},
 								{
-									"key": "post_status",
-									"value": "done"
+									"key": "post_content",
+									"value": "Updated text"
+								},
+								{
+									"key": "post_sum",
+									"value": "4",
+									"description": "\n"
 								},
 								{
 									"key": "post_tags",
@@ -769,7 +786,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/comment/?post_id=2&comment_content=First comment&comment_sum=1.00",
+							"raw": "localhost:5000/comment/?post_id=1&comment_content=First comment",
 							"host": [
 								"localhost"
 							],
@@ -781,15 +798,11 @@
 							"query": [
 								{
 									"key": "post_id",
-									"value": "2"
+									"value": "1"
 								},
 								{
 									"key": "comment_content",
 									"value": "First comment"
-								},
-								{
-									"key": "comment_sum",
-									"value": "1.00"
 								}
 							]
 						}
@@ -808,7 +821,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:5000/comment/2/?comment_content=wtf?&comment_sum=2.00",
+							"raw": "localhost:5000/comment/2/?comment_content=wtf?",
 							"host": [
 								"localhost"
 							],
@@ -822,10 +835,6 @@
 								{
 									"key": "comment_content",
 									"value": "wtf?"
-								},
-								{
-									"key": "comment_sum",
-									"value": "2.00"
 								}
 							]
 						}
@@ -916,7 +925,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:5000/uploads/?comment_id=2",
+							"raw": "localhost:5000/uploads/?post_id=1",
 							"host": [
 								"localhost"
 							],
@@ -927,8 +936,8 @@
 							],
 							"query": [
 								{
-									"key": "comment_id",
-									"value": "2"
+									"key": "post_id",
+									"value": "1"
 								}
 							]
 						}
