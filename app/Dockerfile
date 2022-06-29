@@ -36,6 +36,12 @@ RUN ./venv/bin/pip3.10 install redis==4.3.1
 RUN ./venv/bin/pip3.10 install Flask-Caching==1.10.1
 RUN ./venv/bin/pip3.10 install pyotp==2.6.0
 RUN ./venv/bin/pip3.10 install qrcode[pil]==7.3.1
+RUN ./venv/bin/pip3.10 install flask-cors==3.0.10
+
+# directories permissions
+RUN chmod -R 777 /app/qrcodes
+RUN chmod -R 777 /app/images
+RUN chmod -R 777 /app/uploads
 
 # frontend
 RUN rm -r /var/www/html/*
